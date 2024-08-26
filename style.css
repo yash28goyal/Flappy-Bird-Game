@@ -1,0 +1,98 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #242424;
+}
+#container {
+    width: 100%;
+    height: 100%;
+    background-image: url('./Images/bgFlappyBird.webp');
+    background-size: cover;
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+}
+#bird {
+    position: absolute;
+    top: 40%;
+    left: 25%;
+    width: 140px;
+    height: 100px;
+}
+img {
+    width: 100%;
+    height: 100%;
+}
+.obstacles {
+    height: 100%;
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    right: -100px;
+}
+.obstacles .box {
+    height: 30%;
+} 
+.obstacles .box1 {
+    height: 50%;
+} 
+.score_box {
+    position: fixed;
+    z-index: 100;
+    width: 50vw;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+.btn {
+    width: 20%;
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+}
+.score {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+#start_btn, #restart {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.25rem;
+    font-weight: 700;
+    background-color: #029d02
+}
+@media screen and (max-width : 1025px) {
+    #bird {
+        width: 110px;
+        height: 80px;
+    }
+    .obstacles {
+        width: 80px;
+    }
+    .score {
+        font-size: 1rem;
+    }
+    #start_btn, #restart {
+        width: 100px;
+        font-size: 1rem;
+    }
+}
+@media screen and (max-width : 426px) {
+    #bird {
+        width: 80px;
+        height: 60px;
+    }
+    .obstacles {
+        width: 50px;
+    }
+}
