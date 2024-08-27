@@ -1,4 +1,5 @@
 body {
+    position: relative;
     width: 100vw;
     height: 100vh;
     margin: 0;
@@ -9,7 +10,7 @@ body {
 #container {
     width: 100%;
     height: 100%;
-    background-image: url('./Images/bgFlappyBird.webp');
+    background: url('./Images/bgFlappyBird2.png');
     background-size: cover;
     position: relative;
     margin: auto;
@@ -17,8 +18,8 @@ body {
 }
 #bird {
     position: absolute;
-    top: 40%;
-    left: 25%;
+    top: 100px;
+    left: 15%;
     width: 140px;
     height: 100px;
 }
@@ -59,6 +60,15 @@ img {
     font-weight: 700;
     font-size: 1.5rem;
 }
+.line {
+    position: absolute;
+    bottom: 32px;
+    z-index: 1000;
+    height: 3px;
+    width: 100vw;
+    background-color: red;
+    display: none;
+}
 #start_btn, #restart {
     width: 100%;
     padding: 10px;
@@ -73,6 +83,7 @@ img {
 }
 @media screen and (max-width : 1025px) {
     #bird {
+        left: 10%;
         width: 110px;
         height: 80px;
     }
@@ -86,6 +97,10 @@ img {
         width: 100px;
         font-size: 1rem;
     }
+    .line {
+        display: block;
+        bottom: 16px;
+    }
 }
 @media screen and (max-width : 426px) {
     #bird {
@@ -94,5 +109,9 @@ img {
     }
     .obstacles {
         width: 50px;
+    }
+    .line {
+        display: block;
+        bottom: 32px !important;
     }
 }
